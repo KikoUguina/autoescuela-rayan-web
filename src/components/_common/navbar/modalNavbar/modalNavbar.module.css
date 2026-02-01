@@ -23,14 +23,12 @@
 }
 
 #modalNavbar a > img {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 #modalNavbar .actual_page,
 #modalNavbar a:hover {
-    font-weight: bold;
     transform: scale(1.1);
 }
 

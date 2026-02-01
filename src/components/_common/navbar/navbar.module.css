@@ -40,7 +40,6 @@
 
 .dark #nav_bar .actual_page,
 #nav_bar a:hover {
-    font-weight: bold;
     transform: scale(1.1);
 }
 

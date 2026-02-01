@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useNavbarScroll } from "./useNavbarScroll";
@@ -11,16 +11,10 @@ import { ThreeDots } from "react-loader-spinner";
 export function Navbar() {
   const pathname = usePathname();
   const { visible, showShadow } = useNavbarScroll();
-  const [isLoading, setIsLoading] = useState(true);
   const headerClass = styles.dark;
   const headerId = "";
   const srcImg = "/media/png/logo-rayan.png";
-  const boxShadow = "0px 4px 8px 0px rgba(0, 0, 0, 0.2)";
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 300);
-  }, []);
+  const boxShadow = "0px 4px 8px 0px rgba(255, 255, 255, 0.2)";
 
   const pages = [
     { name: "Inicio", href: "/", icon: "home.svg" },
@@ -63,11 +57,6 @@ export function Navbar() {
 
             return (
               <Link
-                id={
-                  page.name === "Perfil" || page.name === "Login"
-                    ? "clickable"
-                    : ""
-                }
                 key={page.name}
                 href={page.href}
                 className={pathname === page.href ? styles.actual_page : ""}

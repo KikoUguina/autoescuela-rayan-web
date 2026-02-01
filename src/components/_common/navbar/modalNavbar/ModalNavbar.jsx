@@ -6,12 +6,11 @@ export default function ModalNavbar() {
   const pathname = usePathname();
   const pages = [
     { name: "Inicio", href: "/", icon: "home.svg" },
-    { name: "Autoescuela Rayán", href: "/autoescuelarayan", icon: "laela.svg" },
-    { name: "Servicios", href: "/servicios", icon: "blog.svg" },
-    { name: "Noticias", href: "/noticias", icon: "blog.svg" },
-    { name: "Galería", href: "/galeria", icon: "unete.svg" },
-    { name: "Dónde estamos", href: "/dondeestamos", icon: "delreves.svg" },
-    { name: "Contacto", href: "/contacto", icon: "delreves.svg" },
+    { name: "Servicios", href: "/servicios", icon: "services.svg" },
+    { name: "Noticias", href: "/noticias", icon: "news.svg" },
+    { name: "Galería", href: "/galeria", icon: "gallery.svg" },
+    { name: "Dónde estamos", href: "/dondeestamos", icon: "location.svg" },
+    { name: "Contacto", href: "/contacto", icon: "contact.svg" },
   ];
   return (
     <>
@@ -22,16 +21,10 @@ export default function ModalNavbar() {
             href={page.href}
             className={pathname === page.href ? styles.actual_page : ""}
           >
-            <img
-              src={
-                page.name === "Perfil" ? page.icon : `/icons/white/${page.icon}`
-              }
-              alt=""
-            />
+            <img src={`/svg/white/${page.icon}`} alt="" />
             {page.name}
           </Link>
         ))}
-        {user && <button onClick={handleLogout}>Cerrar Sesión</button>}
       </div>
     </>
   );
