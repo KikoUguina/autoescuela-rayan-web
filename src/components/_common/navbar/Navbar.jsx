@@ -6,69 +6,105 @@ import { usePathname } from "next/navigation";
 import { useNavbarScroll } from "./useNavbarScroll";
 import { Hamburger } from "./hamburguer/Hamburger";
 import styles from "./navbar.module.css";
-import { ThreeDots } from "react-loader-spinner";
+
+import { defineElement } from "@lordicon/element";
+
+defineElement();
 
 export function Navbar() {
   const pathname = usePathname();
-  const { visible, showShadow } = useNavbarScroll();
-  const headerClass = styles.dark;
-  const headerId = "";
-  const srcImg = "/media/png/logo-rayan.png";
-  const boxShadow = "0px 4px 8px 0px rgba(255, 255, 255, 0.2)";
-
-  const pages = [
-    { name: "Inicio", href: "/", icon: "home.svg" },
-    { name: "Servicios", href: "/servicios", icon: "services.svg" },
-    { name: "Noticias", href: "/noticias", icon: "news.svg" },
-    { name: "Galería", href: "/galeria", icon: "gallery.svg" },
-    { name: "Dónde estamos", href: "/dondeestamos", icon: "location.svg" },
-    { name: "Contacto", href: "/contacto", icon: "contact.svg" },
-  ];
+  const { visible } = useNavbarScroll();
 
   return (
-    <>
-      <header
-        id={headerId}
-        className={headerClass}
-        style={{
-          top: visible ? "0" : "-100px",
-          transition: "top 0.3s ease-in-out",
-          boxShadow: boxShadow,
-        }}
-      >
-        <img src={srcImg} style={{ height: "70px" }} alt="" />
-        <nav id={styles.nav_bar}>
-          {pages.map((page) => {
-            if (page.name === "Loading...") {
-              return (
-                <ThreeDots
-                  key={page.name}
-                  visible={true}
-                  height="35"
-                  width="35"
-                  color="#4fa94d"
-                  radius="9"
-                  ariaLabel="three-dots-loading"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                />
-              );
-            }
+    <header
+      className={styles.dark}
+      style={{
+        top: visible ? "0" : "-100px",
+        transition: "top 0.3s ease-in-out",
+        boxShadow: "0px 4px 8px rgba(255,255,255,0.2)",
+      }}
+    >
+      {/* LOGO */}
+      <img
+        src="/media/png/logo-rayan.png"
+        alt="Logo"
+        style={{ height: "70px" }}
+      />
 
-            return (
-              <Link
-                key={page.name}
-                href={page.href}
-                className={pathname === page.href ? styles.actual_page : ""}
-              >
-                <img src={`/svg/${page.icon}`} alt={page.name} />
-                {page.name}
-              </Link>
-            );
-          })}
-        </nav>
-        <Hamburger />
-      </header>
-    </>
+      {/* NAV */}
+      <nav id={styles.nav_bar}>
+        <Link href="/" className={pathname === "/" ? styles.actual_page : ""}>
+          <lord-icon
+            src="/svg/home-animated.json"
+            trigger="hover"
+            style={{ width: 25, height: 25 }}
+          />
+          <span>Inicio</span>
+        </Link>
+
+        <Link
+          href="/servicios"
+          className={pathname === "/servicios" ? styles.actual_page : ""}
+        >
+          <lord-icon
+            src="/svg/cart.json"
+            trigger="hover"
+            style={{ width: 25, height: 25 }}
+          />
+          <span>Servicios</span>
+        </Link>
+
+        <Link
+          href="/noticias"
+          className={pathname === "/noticias" ? styles.actual_page : ""}
+        >
+          <lord-icon
+            src="/svg/news.json"
+            trigger="hover"
+            style={{ width: 25, height: 25 }}
+          />
+          <span>Noticias</span>
+        </Link>
+
+        <Link
+          href="/galeria"
+          className={pathname === "/galeria" ? styles.actual_page : ""}
+        >
+          <lord-icon
+            src="/svg/gallery.json"
+            trigger="hover"
+            style={{ width: 25, height: 25 }}
+          />
+          <span>Galería</span>
+        </Link>
+
+        <Link
+          href="/dondeestamos"
+          className={pathname === "/dondeestamos" ? styles.actual_page : ""}
+        >
+          <lord-icon
+            src="/svg/location.json"
+            trigger="hover"
+            style={{ width: 25, height: 25 }}
+          />
+          <span>Dónde estamos</span>
+        </Link>
+
+        <Link
+          href="/contacto"
+          className={pathname === "/contacto" ? styles.actual_page : ""}
+        >
+          <lord-icon
+            src="/svg/contact.json"
+            trigger="hover"
+            style={{ width: 25, height: 25 }}
+          />
+          <span>Contacto</span>
+        </Link>
+      </nav>
+
+      {/* HAMBURGER */}
+      <Hamburger />
+    </header>
   );
 }

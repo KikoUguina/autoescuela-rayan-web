@@ -1,34 +1,26 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 export function useNavbarScroll() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
 
-  const prevScrollPos = useRef(0);
-
   useEffect(() => {
-    // sombra solo una vez
-    const shadowTimeout = setTimeout(() => {
-      setShowShadow(true);
-    }, 500);
-
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-
-      setVisible(
-        prevScrollPos.current > currentScrollPos || currentScrollPos < 100
-      );
-
-      prevScrollPos.current = currentScrollPos;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 100);
+      setTimeout(() => {
+        setShowShadow(true);
+      }, 500);
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearTimeout(shadowTimeout);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
 
   return { visible, showShadow };
 }
