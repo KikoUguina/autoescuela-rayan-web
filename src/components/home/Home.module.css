@@ -13,6 +13,59 @@
   color: var(--rayanPink);
 }
 
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  background: #030014;
+  overflow: hidden;
+  z-index: -2;
+}
+
+/* Orbes */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.7;
+}
+
+/* Colores adaptados a tu rayanPink */
+.orb1 {
+  width: 60%;
+  height: 60%;
+  background: rgba(255, 51, 204, 0.45);
+  top: -10%;
+  left: -10%;
+  animation: orbMove1 60s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 50%;
+  height: 50%;
+  background: rgba(120, 80, 255, 0.35);
+  top: 10%;
+  right: -5%;
+  animation: orbMove2 80s ease-in-out infinite;
+}
+
+.orb3 {
+  width: 70%;
+  height: 55%;
+  background: rgba(0, 200, 255, 0.35);
+  bottom: -15%;
+  left: 20%;
+  animation: orbMove3 90s ease-in-out infinite;
+}
+
+.orb4 {
+  width: 40%;
+  height: 40%;
+  background: rgba(255, 51, 204, 0.25);
+  top: 30%;
+  left: 40%;
+  animation: orbMove4 70s ease-in-out infinite;
+}
+
 /* 🌊 FONDO GLOBAL ANIMADO */
 .gradientWave {
   position: fixed;
@@ -25,7 +78,8 @@
   );
   background-size: 300% 300%;
   animation: wave 22s ease infinite;
-  filter: blur(40px);
+  filter: blur(18px);
+  opacity: 0.9;
   z-index: -2;
 }
 
@@ -48,9 +102,9 @@
   background-image:
     radial-gradient(circle, rgba(255,51,204,0.35) 1px, transparent 1px),
     radial-gradient(circle, rgba(255,51,204,0.25) 1px, transparent 1px);
-  background-size: 90px 90px, 160px 160px;
   animation: floatParticles 70s linear infinite;
-  opacity: 0.2;
+  background-size: 140px 140px, 240px 240px;
+  opacity: 0.12;
   z-index: -1;
 }
 
@@ -71,7 +125,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -150,23 +204,123 @@
   cursor: pointer;
 }
 
+.primaryButton,
+.secondaryButton {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 30px rgba(255, 51, 204, 0.6),
+    0 0 25px rgba(255, 51, 204, 0.7);
+}
+
+.primaryButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.6),
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.primaryButton:hover::after {
+  transform: translateX(120%);
+}
+
+/* BOTÓN SECUNDARIO */
+.secondaryButton:hover {
+  background: rgba(255, 51, 204, 0.12);
+  box-shadow:
+    0 0 25px rgba(255, 51, 204, 0.5),
+    inset 0 0 20px rgba(255, 51, 204, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Program */
+
+.programWrap {
+  width: 80%;
+  margin: 8rem auto;
+  padding: 0 1.5rem;
+}
+
+.programCard {
+  padding: 4rem;
+  border-radius: 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 51, 204, 0.25);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(255, 51, 204, 0.25);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.programCard h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.programLead {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.programCard p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 0 auto 1.4rem;
+}
+
+.programGuarantee {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.programGuarantee span {
+  color: #ff33cc;
+  text-shadow: 0 0 12px rgba(255, 51, 204, 0.6);
+}
+
+
+
 /* INFO */
 .info {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
+  gap: 5rem;
 }
 
 /* 🧼 CARDS CLEAN */
 .infoCard {
   padding: 2.5rem;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.02);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
   box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 8px 0px;
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 51, 204, 0.25);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
 }
 
@@ -186,6 +340,8 @@
   opacity: 0.85;
   line-height: 1.6;
 }
+
+
 
 .fleet {
   margin: 0 auto;
@@ -211,13 +367,17 @@
 /* 🧊 CAR CARD */
 .carCard {
   position: relative;
-  width: 320px;          /* MÁS HORIZONTAL */
+  width: 380px;          /* MÁS HORIZONTAL */
   height: 480px;         /* ALTURA FIJA */
   padding: 24px;
-  border-radius: 22px;
-  background: rgba(25, 25, 25, 0.55);
+  border-radius: 22px;background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 51, 204, 0.25);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
 
   display: flex;
   flex-direction: column;
@@ -233,7 +393,7 @@
 
 .carImage {
   width: 100%;
-  height: 290px;
+  height: 320px;
   margin-bottom: 20px;
 
   display: flex;
@@ -314,6 +474,213 @@
   box-shadow: 0 8px 20px rgba(255, 0, 128, 0.5);
 }
 
+/* SERVICES */
+.servicesFlip {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+/* Card container */
+.flipCard {
+  flex: 1;
+  height: 280px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+/* Inner wrapper */
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(.4,.2,.2,1);
+  transform-style: preserve-3d;
+}
+
+/* Flipped state */
+.flipped .flipInner {
+  transform: rotateY(-180deg);
+}
+
+/* Both sides */
+.flipFront,
+.flipBack {
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.1),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255, 51, 204, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.6),
+    0 0 30px rgba(255, 51, 204, 0.25);
+}
+
+/* FRONT */
+.flipFront h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* BACK */
+.flipBack {
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  
+  .servicesFlip {
+    flex-direction: column;
+    height: 900px;
+  }
+  .flipFront,
+  .flipBack {
+  height: 250px;
+  }
+  .flipCard {
+    width: 100%;
+  }
+}
+
+
+/* Explore */
+.explore {
+  text-align: center;
+}
+
+.exploreButtons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CONTACT */
+.contactSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENEDOR CARTA */
+.contactEnvelope {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 3.5rem 3rem;
+  border-radius: 32px;
+
+  background:
+    linear-gradient(135deg, rgba(255,51,204,0.12), rgba(0,0,0,0.8)),
+    radial-gradient(circle at top right, rgba(255,51,204,0.25), transparent 60%);
+
+  border: 1px solid rgba(255, 51, 204, 0.4);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.8),
+    0 0 50px rgba(255,51,204,0.35);
+
+  backdrop-filter: blur(14px);
+}
+
+/* Simulación de borde interior */
+.contactEnvelope::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 24px;
+  border: 1px dashed rgba(255,51,204,0.4);
+  pointer-events: none;
+}
+
+/* HEADER */
+.contactHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contactHeader h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.contactHeader span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: var(--rayanPink);
+  letter-spacing: 0.15em;
+}
+
+/* INPUTS */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 1.1rem 1.4rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 51, 204, 0.35);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--rayanPink);
+  box-shadow:
+    0 0 25px rgba(255,51,204,0.6),
+    inset 0 0 15px rgba(255,51,204,0.3);
+}
+
+/* BOTÓN ENVÍO */
+.sendButton {
+  background-color: var(--rayanPink);
+  color: #000;
+  border: none;
+  padding: 0.9rem 2.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  transform: translateY(-2px) scale(1);
+  box-shadow:
+    0 25px 60px rgba(255,51,204,1),
+    0 0 60px rgba(255,51,204,0.9);
+}
+
+
+
 /* RESPONSIVE */
 @media (max-width: 480px) {
   .title {
@@ -334,6 +701,10 @@
   .carCard {
     width: 100%;
     max-width: 360px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
   }
 }
 

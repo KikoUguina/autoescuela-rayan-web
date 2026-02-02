@@ -2,8 +2,12 @@
 
 import styles from "@components/home/Home.module.css";
 import IntroSection from "@components/home/homeSections/IntroSection";
+import ProgramHighlight from "@components/home/homeSections/ProgramHighlight";
 import InfoSection from "@components/home/homeSections/InfoSection";
 import FleetSection from "@components/home/homeSections/FleetSection";
+import ContactSection from "@components/home/homeSections/ContactSection";
+import ServicesSection from "@components/home/homeSections/ServicesSection";
+import ExploreSection from "@components/home/homeSections/ExploreSection";
 
 export default function Home() {
   return (
@@ -12,8 +16,12 @@ export default function Home() {
       <div className={styles.particles} />
 
       <IntroSection />
+      <ProgramHighlight />
       <InfoSection />
       <FleetSection />
+      <ServicesSection />
+      <ExploreSection />
+      <ContactSection />
     </main>
   );
 }
