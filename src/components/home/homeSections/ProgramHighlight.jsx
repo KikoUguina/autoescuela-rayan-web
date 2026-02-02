@@ -48,6 +48,12 @@ export default function ProgramHighlight() {
           Y estamos tan seguros de ello que{" "}
           <span>si no apruebas, te devolvemos el dinero</span>.
         </p>
+        <a
+          href="https://web.archive.org/web/20250711202524/https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"
+          target="_blank"
+        >
+          <button className={styles.primaryButton}>Comprobar nota DGT</button>
+        </a>
       </div>
     </section>
   );
