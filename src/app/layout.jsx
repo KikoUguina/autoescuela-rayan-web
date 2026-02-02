@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
         {/* <link rel="icon" href="/eladelreves.ico" /> */}
       </head>
       <body className={inter.className} suppressHydrationWarning>

@@ -50,6 +50,14 @@ input:-webkit-autofill:active {
   color: var(--color);
 }
 
+body {
+  background-color: var(--background-color);
+}
+
+#mainBody{
+  margin: 200px;
+}
+
 h2 {
   font-size: 25pt;
 }

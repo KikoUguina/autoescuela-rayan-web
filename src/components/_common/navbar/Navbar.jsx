@@ -8,7 +8,6 @@ import { Hamburger } from "./hamburguer/Hamburger";
 import styles from "./navbar.module.css";
 
 import { defineElement } from "@lordicon/element";
-
 defineElement();
 
 export function Navbar() {
@@ -16,94 +15,95 @@ export function Navbar() {
   const { visible } = useNavbarScroll();
 
   return (
-    <header
-      className={styles.dark}
-      style={{
-        top: visible ? "0" : "-100px",
-        transition: "top 0.3s ease-in-out",
-        boxShadow: "0px 4px 8px rgba(255,255,255,0.2)",
-      }}
-    >
-      {/* LOGO */}
-      <img
-        src="/media/png/logo-rayan.png"
-        alt="Logo"
-        style={{ height: "70px" }}
-      />
+    <header className={styles.dark} style={{ top: visible ? "0" : "-100px" }}>
+      <img src="/media/png/logo-rayan.png" alt="Logo" className={styles.logo} />
 
-      {/* NAV */}
       <nav id={styles.nav_bar}>
-        <Link href="/" className={pathname === "/" ? styles.actual_page : ""}>
+        <a
+          href="/"
+          id="icon1"
+          className={pathname === "/" ? styles.actual_page : ""}
+        >
           <lord-icon
             src="/svg/home-animated.json"
             trigger="hover"
-            style={{ width: 25, height: 25 }}
+            target="#icon1"
+            style={{ width: 22, height: 22 }}
           />
-          <span>Inicio</span>
-        </Link>
+          Inicio
+        </a>
 
-        <Link
+        <a
           href="/servicios"
+          id="icon2"
           className={pathname === "/servicios" ? styles.actual_page : ""}
         >
           <lord-icon
             src="/svg/cart.json"
             trigger="hover"
-            style={{ width: 25, height: 25 }}
+            target="#icon2"
+            style={{ width: 22, height: 22 }}
           />
-          <span>Servicios</span>
-        </Link>
+          Servicios
+        </a>
 
-        <Link
+        <a
           href="/noticias"
+          id="icon3"
           className={pathname === "/noticias" ? styles.actual_page : ""}
         >
           <lord-icon
             src="/svg/news.json"
             trigger="hover"
-            style={{ width: 25, height: 25 }}
+            target="#icon3"
+            style={{ width: 22, height: 22 }}
           />
-          <span>Noticias</span>
-        </Link>
+          Noticias
+        </a>
 
-        <Link
+        <a
           href="/galeria"
+          id="icon4"
           className={pathname === "/galeria" ? styles.actual_page : ""}
         >
           <lord-icon
             src="/svg/gallery.json"
             trigger="hover"
-            style={{ width: 25, height: 25 }}
+            target="#icon4"
+            style={{ width: 22, height: 22 }}
           />
-          <span>Galería</span>
-        </Link>
+          Galería
+        </a>
 
-        <Link
+        <a
           href="/dondeestamos"
+          id="icon5"
           className={pathname === "/dondeestamos" ? styles.actual_page : ""}
         >
           <lord-icon
             src="/svg/location.json"
             trigger="hover"
-            style={{ width: 25, height: 25 }}
+            target="#icon5"
+            style={{ width: 22, height: 22 }}
           />
-          <span>Dónde estamos</span>
-        </Link>
+          Dónde estamos
+        </a>
 
-        <Link
+        <a
           href="/contacto"
+          id="icon6"
           className={pathname === "/contacto" ? styles.actual_page : ""}
         >
           <lord-icon
             src="/svg/contact.json"
             trigger="hover"
-            style={{ width: 25, height: 25 }}
+            target="#icon6"
+            style={{ width: 22, height: 22 }}
           />
-          <span>Contacto</span>
-        </Link>
+          Contacto
+        </a>
       </nav>
 
-      {/* HAMBURGER */}
       <Hamburger />
     </header>
   );
