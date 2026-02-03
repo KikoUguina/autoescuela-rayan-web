@@ -7,7 +7,7 @@ export default function ModalNavbar() {
   const pages = [
     { name: "Inicio", href: "/", icon: "home.svg" },
     { name: "Servicios", href: "/servicios", icon: "services.svg" },
-    { name: "Noticias", href: "/noticias", icon: "news.svg" },
+    { name: "Nosotros", href: "/nosotros", icon: "news.svg" },
     { name: "Galería", href: "/galeria", icon: "gallery.svg" },
     { name: "Dónde estamos", href: "/dondeestamos", icon: "location.svg" },
     { name: "Contacto", href: "/contacto", icon: "contact.svg" },

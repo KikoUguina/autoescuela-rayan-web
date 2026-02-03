@@ -28,7 +28,7 @@ export function Navbar() {
             src="/svg/home-animated.json"
             trigger="hover"
             target="#icon1"
-            style={{ width: 22, height: 22 }}
+            style={{ width: 25, height: 25 }}
           />
           Inicio
         </a>
@@ -42,23 +42,23 @@ export function Navbar() {
             src="/svg/cart.json"
             trigger="hover"
             target="#icon2"
-            style={{ width: 22, height: 22 }}
+            style={{ width: 25, height: 25 }}
           />
           Servicios
         </a>
 
         <a
-          href="/noticias"
+          href="/nosotros"
           id="icon3"
-          className={pathname === "/noticias" ? styles.actual_page : ""}
+          className={pathname === "/nosotros" ? styles.actual_page : ""}
         >
           <lord-icon
-            src="/svg/news.json"
+            src="/svg/nosotros.json"
             trigger="hover"
             target="#icon3"
-            style={{ width: 22, height: 22 }}
+            style={{ width: 25, height: 25 }}
           />
-          Noticias
+          Nosotros
         </a>
 
         <a
@@ -70,7 +70,7 @@ export function Navbar() {
             src="/svg/gallery.json"
             trigger="hover"
             target="#icon4"
-            style={{ width: 22, height: 22 }}
+            style={{ width: 25, height: 25 }}
           />
           Galería
         </a>
@@ -84,7 +84,7 @@ export function Navbar() {
             src="/svg/location.json"
             trigger="hover"
             target="#icon5"
-            style={{ width: 22, height: 22 }}
+            style={{ width: 25, height: 25 }}
           />
           Dónde estamos
         </a>
@@ -98,7 +98,7 @@ export function Navbar() {
             src="/svg/contact.json"
             trigger="hover"
             target="#icon6"
-            style={{ width: 22, height: 22 }}
+            style={{ width: 25, height: 25 }}
           />
           Contacto
         </a>
