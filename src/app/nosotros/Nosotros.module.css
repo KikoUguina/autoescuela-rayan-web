@@ -1,0 +1,173 @@
+.teamSection {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.teamGrid {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===========================
+   TEAM CARDS
+=========================== */
+
+.teamGrid {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.teamCard {
+  position: relative;
+  width: 360px;
+  height: 520px;
+  padding: 28px;
+
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.09),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 51, 204, 0.25);
+  backdrop-filter: blur(14px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    0 0 35px rgba(255, 51, 204, 0.25);
+}
+
+/* IMAGE */
+.teamImage {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  filter:
+    brightness(1.1)
+    contrast(1.1)
+    saturate(1.15);
+
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.teamCard:hover .teamImage img {
+  transform: scale(1.05);
+  filter:
+    brightness(1.2)
+    contrast(1.2)
+    saturate(1.3);
+}
+
+/* TEXT */
+.teamCard h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.teamRole {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+/* BUTTON */
+
+.teamButton {
+  background: transparent;
+  color: var(--rayanPink);
+  border: 2px solid var(--rayanPink);
+  padding: 0.9rem 2.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.teamButton {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.teamButton:hover {
+  background: rgba(255, 51, 204, 0.12);
+  box-shadow:
+    0 0 25px rgba(255, 51, 204, 0.5),
+    inset 0 0 20px rgba(255, 51, 204, 0.2);
+  transform: translateY(-2px);
+}
+
+.role {
+  opacity: .6;
+  margin-bottom: 1.5rem;
+}
+
+.readMore {
+  display: inline-block;
+  padding: .6rem 1.4rem;
+  border-radius: 999px;
+  background: #7f8cff;
+  color: white;
+  font-size: .9rem;
+}
+
+/* DETALLE */
+.teamDetail {
+  padding: 5rem 3rem;
+}
+
+.teamDetailText {
+  width: 60%;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 3rem;
+  color: #7f8cff;
+}
+
+.detailLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.detailLayout img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
