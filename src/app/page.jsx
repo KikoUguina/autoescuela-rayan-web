@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <div className={styles.gradientWave} />
-      <div className={styles.particles} />
 
       <IntroSection />
       <ProgramHighlight />

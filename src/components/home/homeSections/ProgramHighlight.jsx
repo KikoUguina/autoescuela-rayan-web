@@ -1,25 +1,8 @@
-import { useEffect } from "react";
 import styles from "./../Home.module.css";
+import { reveal } from "@services/reveal";
 
 export default function ProgramHighlight() {
-  useEffect(() => {
-    const sections = document.querySelectorAll(`.${styles.reveal}`);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.visible);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    sections.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  reveal(styles);
 
   return (
     <section id="program" className={`${styles.programWrap} ${styles.reveal}`}>
@@ -48,11 +31,8 @@ export default function ProgramHighlight() {
           Y estamos tan seguros de ello que{" "}
           <span>si no apruebas, te devolvemos el dinero</span>.
         </p>
-        <a
-          href="https://web.archive.org/web/20250711202524/https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"
-          target="_blank"
-        >
-          <button className={styles.primaryButton}>Comprobar nota DGT</button>
+        <a href="https://cloud.aeolservice.es/" target="_blank">
+          <button className={styles.primaryButton}>Hacer tests online</button>
         </a>
       </div>
     </section>

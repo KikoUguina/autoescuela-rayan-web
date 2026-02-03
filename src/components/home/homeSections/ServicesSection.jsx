@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./../Home.module.css";
-
+import { reveal } from "@services/reveal";
 const services = [
   {
     title: "Test y seguimiento",
@@ -21,9 +21,9 @@ const services = [
 
 export default function ServicesSection() {
   const [flipped, setFlipped] = useState(null);
-
+  reveal(styles);
   return (
-    <section className={styles.servicesFlip}>
+    <section className={`${styles.servicesFlip} ${styles.reveal}`}>
       {services.map((service, i) => (
         <div
           key={i}

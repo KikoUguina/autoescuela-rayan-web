@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import styles from "./../Home.module.css";
 import CarCard from "./../carCard/CarCard";
-
+import { reveal } from "@services/reveal";
 const cars = [
   {
     name: "Volkswagen Golf GTI",
@@ -31,25 +30,7 @@ const cars = [
 ];
 
 export default function FleetSection() {
-  useEffect(() => {
-    const sections = document.querySelectorAll(`.${styles.reveal}`);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.visible);
-            observer.unobserve(entry.target); // solo una vez
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    sections.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  reveal(styles);
 
   return (
     <section className={`${styles.fleet} ${styles.reveal}`}>

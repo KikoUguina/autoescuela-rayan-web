@@ -1,8 +1,9 @@
 import styles from "./../Home.module.css";
-
+import { reveal } from "@services/reveal";
 export default function ContactSection() {
+  reveal(styles);
   return (
-    <section className={styles.contactSection}>
+    <section className={`${styles.contactSection} ${styles.reveal}`}>
       <div className={styles.contactEnvelope}>
         <div className={styles.contactHeader}>
           <h2>Contáctanos</h2>

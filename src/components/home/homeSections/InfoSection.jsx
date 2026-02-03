@@ -1,26 +1,7 @@
-import { useEffect } from "react";
 import styles from "./../Home.module.css";
-
+import { reveal } from "@services/reveal";
 export default function InfoSection() {
-  useEffect(() => {
-    const sections = document.querySelectorAll(`.${styles.reveal}`);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.visible);
-            observer.unobserve(entry.target); // solo una vez
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    sections.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  reveal(styles);
   return (
     <section className={`${styles.info} ${styles.reveal}`}>
       <div className={styles.infoCard}>

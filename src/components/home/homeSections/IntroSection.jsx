@@ -21,8 +21,11 @@ export default function IntroSection() {
       </p>
 
       <div className={styles.actions}>
-        <a href="https://cloud.aeolservice.es/" target="_blank">
-          <button className={styles.primaryButton}>Hacer tests online</button>
+        <a
+          href="https://web.archive.org/web/20250711202524/https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"
+          target="_blank"
+        >
+          <button className={styles.primaryButton}>Comprobar nota DGT</button>
         </a>
 
         <button className={styles.secondaryButton} onClick={scrollToProgram}>
