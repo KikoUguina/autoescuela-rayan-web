@@ -6,31 +6,29 @@
 
 html.dark {
   --rayanPink: #ff33cc;
-  --background-color: #181818;
-  --color: #e0e0e0;
   --background-color: rgb(30, 30, 30);
+  --color: #e0e0e0;
   --arrowcolor: #ffffff;
   --dropshadow: drop-shadow(16px 7px 8px #2c2c2c);
-  --color: #e0e0e0;
   --scrollbar-track-color: #333333;
   --scrollbar-thumb-color: var(--rayanPink);
   --custom-arrow-color: var(--arrowcolor);
   --box-shadow: rgba(255, 255, 255, 0.2) 0px 4px 8px 0px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 12px;
 }
 
-::-webkit-scrollbar-track{
-  background: rgb(219, 219, 219) ;
+::-webkit-scrollbar-track {
+  background: rgb(219, 219, 219);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: var(--rayanPink);
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   color: var(--rayanPink);
 }
 
@@ -38,8 +36,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
-    -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #000 !important;
 }
 
 * {
@@ -54,16 +52,8 @@ body {
   background-color: var(--background-color);
 }
 
-#mainBody{
-  margin: 200px;
-}
-
 h2 {
   font-size: 25pt;
-}
-
-.ReactModal__Body--open div {
-  z-index: 2000;
 }
 
 .swal2-popup {
@@ -77,11 +67,6 @@ h2 {
 .swal2-popup .swal2-confirm:active, .swal2-popup .swal2-confirm:focus {
   box-shadow: none;
   border: 0;
-}
-
-.ql-editor {
-  height: 250px;
-  max-height: 250px;
 }
 
 @media (max-width: 480px) {

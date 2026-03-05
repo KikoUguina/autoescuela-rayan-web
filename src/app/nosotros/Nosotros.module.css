@@ -10,17 +10,6 @@
 
 .teamGrid {
   display: flex;
-  gap: 4rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ===========================
-   TEAM CARDS
-=========================== */
-
-.teamGrid {
-  display: flex;
   gap: 3rem;
   justify-content: center;
   align-items: stretch;
@@ -41,7 +30,6 @@
   );
 
   border: 1px solid rgba(255, 51, 204, 0.25);
-  backdrop-filter: blur(14px);
 
   display: flex;
   flex-direction: column;
@@ -116,8 +104,6 @@
   font-weight: 700;
   border-radius: 14px;
   cursor: pointer;
-}
-.teamButton {
   position: relative;
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -139,7 +125,7 @@
   display: inline-block;
   padding: .6rem 1.4rem;
   border-radius: 999px;
-  background: #7f8cff;
+  background: var(--rayanPink);
   color: white;
   font-size: .9rem;
 }
@@ -156,7 +142,7 @@
 .back {
   display: inline-block;
   margin-bottom: 3rem;
-  color: #7f8cff;
+  color: var(--rayanPink);
 }
 
 .detailLayout {
