@@ -1,12 +1,12 @@
+import Link from "next/link";
 import styles from "@app/nosotros/Nosotros.module.css";
 import type { TeamMember } from "@shared-types/index";
 
 interface TeamCardProps {
   member: TeamMember;
-  onSelect: (member: TeamMember) => void;
 }
 
-export default function TeamCard({ member, onSelect }: TeamCardProps) {
+export default function TeamCard({ member }: TeamCardProps) {
   return (
     <article className={styles.teamCard}>
       <div className={styles.teamImage}>
@@ -16,9 +16,9 @@ export default function TeamCard({ member, onSelect }: TeamCardProps) {
       <h3>{member.name}</h3>
       <p className={styles.teamRole}>{member.role}</p>
 
-      <button className={styles.teamButton} onClick={() => onSelect(member)}>
+      <Link href={`/nosotros/${member.slug}`} className={styles.teamButton}>
         Leer más
-      </button>
+      </Link>
     </article>
   );
 }
