@@ -20,8 +20,8 @@ export default function Galeria() {
         </p>
       </section>
 
-      {galleryData.map((car) => (
-        <LazyCarSection key={car.slug} car={car} />
+      {galleryData.map((car, i) => (
+        <LazyCarSection key={car.slug} car={car} loadImmediately={i === 0} />
       ))}
     </main>
   );
