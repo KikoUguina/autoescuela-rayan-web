@@ -159,14 +159,42 @@
 @media (max-width: 900px) {
   .servicesFlip {
     flex-direction: column;
-    height: 900px;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    gap: 2rem;
+  }
+  .flipCard {
+    flex: none;
+    width: 100%;
+    max-width: 500px;
+    height: 220px;
   }
   .flipFront,
   .flipBack {
-    height: 250px;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesFlip {
+    width: 100%;
+    gap: 1.5rem;
   }
   .flipCard {
-    width: 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+  .flipFront h3 {
+    font-size: 1.5rem;
+  }
+  .flipBack {
+    font-size: 0.95rem;
+  }
+  .flipFront,
+  .flipBack {
+    padding: 1.5rem;
+    border-radius: 20px;
   }
 }
 

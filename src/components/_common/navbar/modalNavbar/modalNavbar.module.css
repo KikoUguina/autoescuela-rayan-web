@@ -16,15 +16,16 @@
     align-items: center;
     position: relative;
     text-decoration: none;
-    font-size: 50px;
-    gap: 10px;
+    font-size: 32px;
+    gap: 12px;
     transition: all 0.5s;
     width: fit-content;
 }
 
-#modalNavbar a > img {
-    height: 40px;
-    width: 40px;
+#modalNavbar a > lord-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
 }
 
 #modalNavbar .actual_page,
@@ -60,8 +61,29 @@
 }
 
 @media (max-width: 800px) {
-    #modalNavbar a{
+    #modalNavbar a {
         font-size: 24px;
+    }
+
+    #modalNavbar a > lord-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    #modalNavbar {
+        width: 80%;
+        gap: 18px;
+    }
+
+    #modalNavbar a {
+        font-size: 20px;
+    }
+
+    #modalNavbar a > lord-icon {
+        width: 22px;
+        height: 22px;
     }
 }
 

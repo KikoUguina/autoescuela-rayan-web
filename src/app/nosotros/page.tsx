@@ -2,6 +2,14 @@ import { team } from "@services/team";
 import TeamCard from "@components/nosotros/TeamCard";
 import styles from "@app/nosotros/Nosotros.module.css";
 import shared from "@styles/shared.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nosotros",
+  description:
+    "Conoce al equipo de Autoescuela Rayán en Alcorcón. Profesores con experiencia, trato cercano y pasión por la enseñanza vial.",
+  alternates: { canonical: "/nosotros" },
+};
 
 export default function NosotrosSection() {
   return (
