@@ -9,6 +9,23 @@ interface CarGalleryProps {
   car: CarGalleryData;
 }
 
+function SlideImage({ src, alt }: { src: string; alt: string }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className={styles.slideWrapper}>
+      {!loaded && <div className={styles.slideSkeleton} />}
+      <img
+        className={`${styles.slideImage} ${loaded ? styles.slideLoaded : styles.slideHidden}`}
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+      />
+    </div>
+  );
+}
+
 export default function CarGallery({ car }: CarGalleryProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -53,12 +70,7 @@ export default function CarGallery({ car }: CarGalleryProps) {
           <div className={styles.container}>
             {car.images.map((src, i) => (
               <div className={styles.slide} key={i}>
-                <img
-                  className={styles.slideImage}
-                  src={src}
-                  alt={`${car.name} - foto ${i + 1}`}
-                  loading="lazy"
-                />
+                <SlideImage src={src} alt={`${car.name} - foto ${i + 1}`} />
               </div>
             ))}
           </div>
