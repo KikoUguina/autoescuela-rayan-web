@@ -48,4 +48,29 @@
     #footer_data > div {
         align-items: center;
     }
+
+    #footer_data > div:first-child,
+    #footer_data > div:last-child {
+        width: auto;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer {
+        padding: 20px 15px;
+    }
+
+    #footer_data {
+        gap: 35px;
+    }
+
+    #footer_data > div {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #footer_data h4 {
+        font-size: 18px;
+    }
 }

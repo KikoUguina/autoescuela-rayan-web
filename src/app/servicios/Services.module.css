@@ -112,8 +112,69 @@ box-shadow:
 
 /* Responsive */
 @media (max-width: 900px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
   .steps {
     display: flex;
     flex-direction: column;
+  }
+
+  .adas {
+    padding: 6rem 2rem;
+  }
+
+  .adas h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .process {
+    padding: 3rem 1.5rem;
+  }
+
+  .stepCard {
+    padding: 2rem;
+  }
+
+  .adas {
+    padding: 4rem 1.5rem;
+  }
+
+  .adas h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .stepCard {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .adas h2 {
+    font-size: 1.6rem;
   }
 }

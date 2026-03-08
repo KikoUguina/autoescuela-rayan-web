@@ -1,15 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./modalNavbar.module.css";
 import { usePathname } from "next/navigation";
-import type { NavItem } from "@shared-types/index";
 
-const pages: NavItem[] = [
-  { name: "Inicio", href: "/", icon: "home.svg" },
-  { name: "Servicios", href: "/servicios", icon: "services.svg" },
-  { name: "Nosotros", href: "/nosotros", icon: "news.svg" },
-  { name: "Galería", href: "/galeria", icon: "gallery.svg" },
-  { name: "Dónde estamos", href: "/dondeestamos", icon: "location.svg" },
-  { name: "Contacto", href: "/contacto", icon: "contact.svg" },
+const pages = [
+  { name: "Inicio", href: "/", icon: "/svg/home-animated.json" },
+  { name: "Servicios", href: "/servicios", icon: "/svg/cart.json" },
+  { name: "Nosotros", href: "/nosotros", icon: "/svg/nosotros.json" },
+  { name: "Galería", href: "/galeria", icon: "/svg/gallery.json" },
+  { name: "Dónde estamos", href: "/dondeestamos", icon: "/svg/location.json" },
+  { name: "Contacto", href: "/contacto", icon: "/svg/contact.json" },
 ];
 
 export default function ModalNavbar() {
@@ -17,13 +18,20 @@ export default function ModalNavbar() {
 
   return (
     <div id={styles.modalNavbar}>
-      {pages.map((page) => (
+      {pages.map((page, i) => (
         <Link
           key={page.name}
           href={page.href}
+          id={`modal-icon-${i}`}
           className={pathname === page.href ? styles.actual_page : ""}
         >
-          <img src={`/svg/white/${page.icon}`} alt="" />
+          <lord-icon
+            src={page.icon}
+            trigger="hover"
+            target={`#modal-icon-${i}`}
+            colors="primary:#ffffff"
+            style={{ width: 32, height: 32 }}
+          />
           {page.name}
         </Link>
       ))}

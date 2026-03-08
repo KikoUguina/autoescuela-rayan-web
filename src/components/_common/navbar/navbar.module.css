@@ -87,8 +87,19 @@
   #nav_bar {
     display: none;
   }
-  .dark{
+  .dark {
     backdrop-filter: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dark {
+    height: 75px;
+    padding: 0 15px;
+  }
+
+  .logo {
+    height: 50px;
   }
 }
 

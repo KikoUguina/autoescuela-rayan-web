@@ -189,8 +189,16 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .hero {
+    padding: 8rem 1.5rem 3rem;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
   }
 
   .slide {
@@ -207,6 +215,10 @@
 }
 
 @media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
   .slide {
     flex: 0 0 100%;
   }
@@ -215,5 +227,9 @@
     width: 36px;
     height: 36px;
     font-size: 1rem;
+  }
+
+  .carSection {
+    padding: 2rem 0.8rem;
   }
 }

@@ -326,6 +326,15 @@
     max-width: 450px;
     margin: 0 auto;
   }
+
+  .detailLayout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .teamDetail {
+    padding: 7rem 2rem 4rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -338,7 +347,18 @@
   }
 
   .teamSection {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
+  }
+
+  .teamCard {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    min-height: 480px;
+  }
+
+  .teamGrid {
+    gap: 2rem;
   }
 
   .teamDetail {
@@ -368,6 +388,10 @@
     text-align: left;
   }
 
+  .valuesSection {
+    padding: 3rem 1.5rem 6rem;
+  }
+
   .valuesSection h2 {
     font-size: 2rem;
   }
@@ -376,5 +400,22 @@
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .teamCard {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .teamImage {
+    height: 260px;
+  }
+
+  .valuesSection h2 {
+    font-size: 1.7rem;
+  }
+
+  .valueCard {
+    padding: 1.8rem 1.5rem;
   }
 }
