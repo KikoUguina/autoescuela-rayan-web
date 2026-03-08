@@ -17,7 +17,7 @@ export function Navbar() {
 
   return (
     <header className={styles.dark} style={{ top: visible ? "0" : "-100px" }}>
-      <img src="/media/png/logo-rayan.png" alt="Autoescuela Rayán" className={styles.logo} width={120} height={60} />
+      <img src="/media/png/logo-rayan.png" alt="Autoescuela Rayán" className={styles.logo}/>
 
       <nav id={styles.nav_bar}>
         <Link
