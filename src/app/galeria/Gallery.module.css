@@ -1,0 +1,235 @@
+/* PAGE */
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  padding: 10rem 2rem 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  opacity: 0.85;
+}
+
+/* CAR SECTION */
+.carSection {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carHeader {
+  margin-bottom: 2.5rem;
+}
+
+.carHeader h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.carHeader p {
+  opacity: 0.7;
+  font-size: 1.1rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 51, 204, 0.4),
+    transparent
+  );
+  margin: 2rem 0;
+}
+
+/* PLACEHOLDER */
+.placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 51, 204, 0.15);
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+/* CAROUSEL */
+.carousel {
+  position: relative;
+}
+
+.viewport {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+.slide {
+  flex: 0 0 80%;
+  min-width: 0;
+}
+
+.slideImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* CAROUSEL CONTROLS */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.navButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 51, 204, 0.3);
+  background: rgba(255, 51, 204, 0.08);
+  color: var(--rayanPink);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navButton:hover {
+  background: rgba(255, 51, 204, 0.2);
+  transform: scale(1.1);
+}
+
+.navButton:disabled {
+  opacity: 0.3;
+  cursor: default;
+  transform: none;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: rgba(255, 51, 204, 0.5);
+}
+
+.dotActive {
+  background: var(--rayanPink);
+  transform: scale(1.3);
+}
+
+/* VIDEO */
+.videoSection {
+  margin-top: 2.5rem;
+}
+
+.videoSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.videoWrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 51, 204, 0.25);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 51, 204, 0.15);
+}
+
+.video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 8rem 1.5rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .slide {
+    flex: 0 0 90%;
+  }
+
+  .carSection {
+    padding: 3rem 1rem;
+  }
+
+  .carHeader h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+
+  .navButton {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .carSection {
+    padding: 2rem 0.8rem;
+  }
+}

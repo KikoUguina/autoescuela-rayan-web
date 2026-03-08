@@ -1,0 +1,333 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* HERO */
+.hero {
+  padding: 10rem 2rem 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* MAP SECTION */
+.mapSection {
+  padding: 2rem 2rem 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.mapContainer {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 51, 204, 0.3);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(255, 51, 204, 0.2);
+  min-height: 400px;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* INFO CARDS */
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  padding: 2rem 2.2rem;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.09),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 51, 204, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(255, 51, 204, 0.2);
+}
+
+.infoCard h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--rayanPink);
+}
+
+.infoCard p {
+  opacity: 0.85;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* ═══════════════════════════════════════
+   REVIEWS SECTION — GOOGLE-STYLE
+   ═══════════════════════════════════════ */
+
+.reviewsSection {
+  padding: 4rem 2rem 8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GOOGLE SUMMARY BAR */
+.googleSummary {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.8rem 2.4rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 3rem;
+}
+
+.googleLogo {
+  flex-shrink: 0;
+}
+
+.summaryRating {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.ratingNumber {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.summaryStars {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.summaryCount {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+/* HEADER */
+.reviewsHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.reviewsHeader h2 {
+  font-size: 2.4rem;
+}
+
+/* TRACK */
+.reviewsTrack {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1.5rem;
+}
+
+.reviewsTrack::-webkit-scrollbar {
+  height: 6px;
+}
+
+.reviewsTrack::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.reviewsTrack::-webkit-scrollbar-thumb {
+  background: var(--rayanPink);
+  border-radius: 3px;
+}
+
+/* REVIEW CARD */
+.reviewCard {
+  position: relative;
+  min-width: 340px;
+  max-width: 380px;
+  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.reviewCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* GOOGLE ICON (top-right) */
+.reviewGoogleIcon {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  opacity: 0.6;
+}
+
+/* REVIEW HEADER */
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.reviewAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.reviewMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reviewAuthor {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* RATING ROW */
+.reviewRatingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.reviewStars {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.reviewTime {
+  font-size: 0.78rem;
+  opacity: 0.4;
+}
+
+/* TEXT */
+.reviewText {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  opacity: 0.8;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .mapSection {
+    grid-template-columns: 1fr;
+  }
+
+  .mapContainer {
+    min-height: 320px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .googleSummary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 8rem 1.5rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .mapSection {
+    padding: 1.5rem 1.5rem 4rem;
+  }
+
+  .reviewsSection {
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  .googleSummary {
+    padding: 1.4rem 1.6rem;
+  }
+
+  .ratingNumber {
+    font-size: 2.2rem;
+  }
+
+  .reviewCard {
+    min-width: 290px;
+    padding: 1.4rem 1.6rem;
+  }
+
+  .reviewsHeader h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .reviewCard {
+    min-width: 265px;
+  }
+}

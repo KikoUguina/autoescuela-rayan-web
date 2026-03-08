@@ -1,0 +1,421 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* HERO */
+.hero {
+  padding: 10rem 2rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.8;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* TEAM SECTION */
+.teamSection {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.teamGrid {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.teamCard {
+  position: relative;
+  width: 360px;
+  height: 520px;
+  padding: 28px;
+
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.09),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 51, 204, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    0 0 35px rgba(255, 51, 204, 0.25);
+}
+
+/* IMAGE WITH GLOW SHADOW */
+.teamImage {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  filter:
+    brightness(1.1)
+    contrast(1.1)
+    saturate(1.15)
+    drop-shadow(0 8px 25px rgba(255, 51, 204, 0.3));
+
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.teamCard:hover .teamImage img {
+  transform: scale(1.05);
+  filter:
+    brightness(1.2)
+    contrast(1.2)
+    saturate(1.3)
+    drop-shadow(0 12px 35px rgba(255, 51, 204, 0.5));
+}
+
+/* TEXT */
+.teamCard h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.teamRole {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+/* BUTTON — solid pink, shine effect */
+.teamButton {
+  background: var(--rayanPink);
+  color: #000;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.teamButton:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 25px rgba(255, 51, 204, 0.5),
+    0 0 20px rgba(255, 51, 204, 0.6);
+}
+
+.teamButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5),
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.teamButton:hover::after {
+  transform: translateX(120%);
+}
+
+/* ═══════════════════════════════════════
+   VALUES SECTION
+   ═══════════════════════════════════════ */
+
+.valuesSection {
+  padding: 4rem 2rem 8rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.valuesSection h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.valueCard {
+  padding: 2.2rem 2rem;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 51, 204, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 51, 204, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 51, 204, 0.15);
+}
+
+.valueIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.valueCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--rayanPink);
+}
+
+.valueCard p {
+  font-size: 0.92rem;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════
+   DETAIL PAGE
+   ═══════════════════════════════════════ */
+
+.teamDetail {
+  padding: 8rem 3rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* BREADCRUMBS */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+  font-size: 0.95rem;
+}
+
+.breadcrumbLink {
+  color: var(--rayanPink);
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  opacity: 0.7;
+}
+
+.breadcrumbSep {
+  opacity: 0.35;
+  font-size: 1.1rem;
+}
+
+.breadcrumbCurrent {
+  opacity: 0.6;
+}
+
+/* LAYOUT */
+.detailLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* DETAIL IMAGE */
+.detailImage {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.detailImage img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 22px;
+  display: block;
+
+  filter:
+    brightness(1.1)
+    contrast(1.1)
+    saturate(1.15)
+    drop-shadow(0 10px 30px rgba(255, 51, 204, 0.35));
+}
+
+/* TEXT */
+.teamDetailText {
+  animation: fadeSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.1s;
+}
+
+.teamDetailText h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.teamDetailText h3 {
+  margin-bottom: 1.8rem;
+}
+
+.teamDetailText p {
+  line-height: 1.8;
+  opacity: 0.85;
+  font-size: 1.05rem;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .detailLayout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .teamDetail {
+    padding: 7rem 2rem 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 8rem 1.5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .teamSection {
+    padding: 3rem 1rem;
+  }
+
+  .teamCard {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    min-height: 480px;
+  }
+
+  .teamGrid {
+    gap: 2rem;
+  }
+
+  .teamDetail {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .detailLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .detailImage img {
+    max-height: 350px;
+  }
+
+  .teamDetailText {
+    text-align: justify;
+  }
+
+  .teamDetailText h1 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .teamDetailText h3 {
+    text-align: left;
+  }
+
+  .valuesSection {
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  .valuesSection h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .teamCard {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .teamImage {
+    height: 260px;
+  }
+
+  .valuesSection h2 {
+    font-size: 1.7rem;
+  }
+
+  .valueCard {
+    padding: 1.8rem 1.5rem;
+  }
+}

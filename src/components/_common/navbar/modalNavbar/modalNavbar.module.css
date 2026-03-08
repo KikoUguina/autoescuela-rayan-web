@@ -1,0 +1,103 @@
+#modalNavbar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100;
+    width: 70%;
+    gap: 25px;
+    flex-direction: column;
+    display: none;
+}
+
+#modalNavbar a {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    font-size: 32px;
+    gap: 12px;
+    transition: all 0.5s;
+    width: fit-content;
+}
+
+#modalNavbar a > lord-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+#modalNavbar .actual_page,
+#modalNavbar a:hover {
+    transform: scale(1.1);
+}
+
+/*
+----------------------------------------------------------------
+    Underline effect
+----------------------------------------------------------------
+*/
+#modalNavbar a::after {
+    background-color: white;
+    content: "";
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.7s;
+    width: 0;
+}
+
+#modalNavbar .actual_page::after,
+#modalNavbar a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    #modalNavbar {
+        display: flex;
+    }
+}
+
+@media (max-width: 800px) {
+    #modalNavbar a {
+        font-size: 24px;
+    }
+
+    #modalNavbar a > lord-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    #modalNavbar {
+        width: 80%;
+        gap: 18px;
+    }
+
+    #modalNavbar a {
+        font-size: 20px;
+    }
+
+    #modalNavbar a > lord-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+#modalNavbar button{
+    min-width: 40%;
+    display: inline-block;
+    background: #fff;
+    color: black;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 18px;
+    transition: .5s linear;
+}

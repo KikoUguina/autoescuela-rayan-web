@@ -1,0 +1,244 @@
+.contactSection {
+  padding: 2rem;
+}
+
+/* WRAPPER */
+.contactWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* LEFT — INFO */
+.contactInfo h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+
+.contactSubtitle {
+  opacity: 0.75;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 400px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.contactDetailItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detailIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 51, 204, 0.12);
+  border: 1px solid rgba(255, 51, 204, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contactDetailItem div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactDetailItem strong {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contactDetailItem span {
+  font-size: 0.95rem;
+}
+
+/* RIGHT — FORM CARD */
+.contactFormCard {
+  padding: 2.8rem 2.5rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.4));
+  border: 1px solid rgba(255, 51, 204, 0.2);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(255, 51, 204, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+/* FORM */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fieldGroup label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  padding-left: 2px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 0.95rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: white;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--rayanPink);
+  background: rgba(255, 51, 204, 0.04);
+  box-shadow: 0 0 20px rgba(255, 51, 204, 0.15);
+}
+
+.inputError {
+  border-color: #ff4444 !important;
+}
+
+.errorMsg {
+  color: #ff6b6b;
+  font-size: 0.78rem;
+  padding-left: 2px;
+}
+
+/* BUTTON */
+.sendButton {
+  background: var(--rayanPink);
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-top: 0.5rem;
+}
+
+.sendButton:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 30px rgba(255, 51, 204, 0.5),
+    0 0 25px rgba(255, 51, 204, 0.6);
+}
+
+.sendButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5),
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.sendButton:hover::after {
+  transform: translateX(120%);
+}
+
+.sendButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contactInfo {
+    text-align: center;
+  }
+
+  .contactSubtitle {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactDetails {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 2rem 1.5rem;
+  }
+
+  .contactInfo h2 {
+    font-size: 2rem;
+  }
+
+  .contactFormCard {
+    padding: 2rem 1.6rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactInfo h2 {
+    font-size: 1.7rem;
+  }
+
+  .contactFormCard {
+    padding: 1.8rem 1.3rem;
+    border-radius: 20px;
+  }
+}
