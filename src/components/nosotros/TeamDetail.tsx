@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import styles from "@app/nosotros/Nosotros.module.css";
 import shared from "@styles/shared.module.css";
@@ -23,9 +24,13 @@ export default function TeamDetail({ person }: TeamDetailProps) {
 
       <div className={styles.detailLayout}>
         <div className={styles.detailImage}>
-          <img
+          <Image
             src={person.image}
             alt={person.name}
+            width={520}
+            height={520}
+            quality={80}
+            sizes="(max-width: 600px) 100vw, 50vw"
             style={{ viewTransitionName: `team-${person.slug}` }}
           />
         </div>

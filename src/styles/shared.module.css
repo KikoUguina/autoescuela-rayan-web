@@ -111,6 +111,12 @@
   cursor: pointer;
 }
 
+@media (hover: none) {
+  .flipCard {
+    cursor: default;
+  }
+}
+
 .flipInner {
   position: relative;
   width: 100%;

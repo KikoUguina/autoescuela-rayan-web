@@ -148,8 +148,9 @@
 
 .slideImage {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
+  object-position: center 56%;
   border-radius: 20px;
   display: block;
 }

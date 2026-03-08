@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "@app/galeria/Gallery.module.css";
 import type { CarGalleryData } from "@services/gallery";
@@ -15,11 +16,14 @@ function SlideImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div className={styles.slideWrapper}>
       {!loaded && <div className={styles.slideSkeleton} />}
-      <img
+      <Image
         className={`${styles.slideImage} ${loaded ? styles.slideLoaded : styles.slideHidden}`}
         src={src}
         alt={alt}
-        loading="lazy"
+        width={1200}
+        height={750}
+        quality={75}
+        sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, 80vw"
         onLoad={() => setLoaded(true)}
       />
     </div>

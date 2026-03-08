@@ -31,7 +31,6 @@ export default function ServicesCards() {
     <section className={`${shared.servicesFlip} ${shared.reveal}`}>
       {services.map((service, i) => (
         <div
-          id="icon"
           key={i}
           className={`${shared.flipCard} ${flipped === i ? shared.flipped : ""}`}
           onClick={() => setFlipped(flipped === i ? null : i)}
@@ -39,12 +38,13 @@ export default function ServicesCards() {
           <div className={shared.flipInner}>
             <div className={shared.flipFront}>
               <h3>{service.title}</h3>
-              <lord-icon
-                src="/svg/tap.json"
-                trigger="loop"
-                target="#icon"
-                style={{ width: 50, height: 50 }}
-              />
+              {flipped !== i && (
+                <lord-icon
+                  src="/svg/tap.json"
+                  trigger="loop"
+                  style={{ width: 50, height: 50 }}
+                />
+              )}
             </div>
             <div className={shared.flipBack}>
               <p>{service.description}</p>
