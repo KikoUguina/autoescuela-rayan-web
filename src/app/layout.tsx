@@ -2,7 +2,7 @@ import "./globals.css";
 import { Navbar } from "@components/_common/navbar/Navbar";
 import { Footer } from "@components/_common/footer/Footer";
 import CookieBanner from "@components/_common/cookies/CookieBanner";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Script from "next/script";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next"
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   verification: {},
 };
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -126,7 +126,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="dark">
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={poppins.className} suppressHydrationWarning>
         <Script
           id="json-ld"
           type="application/ld+json"

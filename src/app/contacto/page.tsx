@@ -222,7 +222,7 @@ export default function Contacto() {
             <p>
               Lunes a Viernes
               <br />
-              10:00–14:00 / 17:00–20:00
+              10:00–13:30 / 17:00–20:30
             </p>
           </div>
 

@@ -17,7 +17,7 @@ const services: ServiceItem[] = [
   {
     title: "Permiso B",
     description:
-      "Formación completa para conducir coche. Teoría personalizada, prácticas reales y preparación total para aprobar a la primera.",
+      "Formación completa para conducir turismo. Teoría personalizada, prácticas reales y preparación total para aprobar a la primera.",
   },
 ];
 

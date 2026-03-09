@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Font loaded via next/font in layout.tsx */
 
 .rayanPink { color: var(--rayanPink); }
 
@@ -46,6 +46,7 @@ input:-webkit-autofill:active {
   padding: 0;
   text-decoration: none;
   color: var(--color);
+  font-family: inherit;
 }
 
 body {
@@ -57,7 +58,7 @@ h2 {
 }
 
 .swal2-popup {
-  font-family: 'Inter';
+  font-family: inherit;
 }
 
 .swal2-popup .swal2-confirm {

@@ -49,7 +49,7 @@ export default function ContactData() {
       <div>
         <img src="/svg/phone.svg" alt="" />
         <a onClick={() => copyToClipboard("916038585")} style={{ cursor: "pointer" }}>
-          91 603 85 85
+          91 611 99 44
         </a>
       </div>
     </div>

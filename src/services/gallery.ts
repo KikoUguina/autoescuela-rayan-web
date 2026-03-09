@@ -49,7 +49,7 @@ export const galleryData: CarGalleryData[] = [
       "/galeria/polo_gti_front.webp",
       "/galeria/polo_gti_back.webp",
       "/galeria/polo_gti_door.webp",
-      "/galeria/polo_gti_interior.webp",
+      "/galeria/polo_gti_interior.jpeg",
       "/galeria/puerta_polo_gti.webp",
     ],
     video: "/galeria/polo_gti_interior_video.mp4",
