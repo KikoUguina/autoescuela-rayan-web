@@ -24,7 +24,7 @@ export default function IntroSection() {
 
       <div className={styles.actions}>
         <a
-          href="https://web.archive.org/web/20250711202524/https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"
+          href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"
           target="_blank"
           rel="noreferrer"
         >
