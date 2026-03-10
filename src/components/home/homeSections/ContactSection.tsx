@@ -119,7 +119,7 @@ export default function ContactSection() {
               <span className={s.detailIcon}>🕐</span>
               <div>
                 <strong>Horario</strong>
-                <span>L-V: 10:00–14:00 / 17:00–20:00</span>
+                <span>L-V: 10:00–13:30 / 17:00–20:30</span>
               </div>
             </div>
           </div>

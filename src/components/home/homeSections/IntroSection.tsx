@@ -9,6 +9,7 @@ export default function IntroSection() {
 
   return (
     <section className={styles.hero}>
+      <span className={styles.badge}>Más de 15 años formando conductores</span>
       <h1 className={styles.title}>
         Aprende a conducir con{" "}
         <span className={shared.glow}>Autoescuela Rayán</span>

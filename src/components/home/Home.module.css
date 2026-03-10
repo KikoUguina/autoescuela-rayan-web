@@ -45,6 +45,20 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rayanPink);
+  border: 1px solid rgba(255, 51, 204, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 51, 204, 0.08);
+}
+
 .title {
   font-size: 3.3rem;
   font-weight: 700;

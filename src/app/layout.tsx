@@ -96,13 +96,13 @@ const jsonLd = {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "10:00",
-      closes: "14:00",
+      closes: "13:30",
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "17:00",
-      closes: "20:00",
+      closes: "20:30",
     },
   ],
   aggregateRating: {

@@ -108,7 +108,7 @@ export default function DondeEstamos() {
           <div className={styles.infoCard}>
             <h3>Horario</h3>
             <p>
-              Lunes a Viernes: 10:00 – 14:00 / 17:00 – 20:00
+              Lunes a Viernes: 10:00 – 13:30 / 17:00 – 20:30
               <br />
               Sábados y Domingos: Cerrado
             </p>
