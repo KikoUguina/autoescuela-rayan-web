@@ -3,7 +3,7 @@ import type { TeamMember } from "@shared-types/index";
 export const team: TeamMember[] = [
   {
     name: "Antonio Rayan",
-    role: "Profesor de examen práctico.",
+    role: "Profesor de práctico.",
     image: "/media/png/Antonio.png",
     slug: "antonio-rayan",
     text: `
@@ -27,7 +27,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Rocío",
-    role: "Profesora de examen práctico.",
+    role: "Profesora de práctico.",
     image: "/media/png/Rocio.png",
     slug: "rocio",
     text: `
