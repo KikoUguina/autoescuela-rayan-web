@@ -28,10 +28,6 @@ export default function ProgramHighlight() {
           totalmente <strong>personalizado</strong> para ti.
         </p>
 
-        <p className={programStyles.programGuarantee}>
-          Y estamos tan seguros de ello que{" "}
-          <span>si no apruebas, te devolvemos el dinero</span>.
-        </p>
         <a href="https://cloud.aeolservice.es/" target="_blank" rel="noreferrer">
           <button className={shared.primaryButton}>Hacer tests online</button>
         </a>

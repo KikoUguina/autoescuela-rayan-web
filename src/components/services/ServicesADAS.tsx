@@ -3,10 +3,14 @@ import shared from "@styles/shared.module.css";
 import { useReveal } from "@services/reveal";
 
 const adasFeatures: string[] = [
+  "Start Stop",
+  "Ayuda de salida en pendiente",
+  "Cámara de marcha atrás",
+  "Ayuda al estacionamiento",
+  "Activación automática de alumbrado y limpiaparabrisas",
   "Control de estabilidad",
-  "Asistencia en frenada",
-  "Climatizador bizona",
-  "Control de consumo",
+  "Frenado de emergencia urbano e interurbano (AEB)",
+  "Sistema avanzado de mantenimiento de carril (LKA)",
   "Asientos deportivos",
   "Cambios de 6 velocidades",
 ];

@@ -14,7 +14,7 @@ const services: ServiceItem[] = [
   {
     title: "Clases prácticas",
     description:
-      "Vehículos modernos, profesores expertos y un entorno cómodo para aprender de forma segura.",
+      "Vehículos modernos, profesores expertos y un entorno cómodo para aprender de forma segura. Amplio horario a tu medida.",
   },
   {
     title: "Permiso B",

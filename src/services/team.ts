@@ -3,7 +3,7 @@ import type { TeamMember } from "@shared-types/index";
 export const team: TeamMember[] = [
   {
     name: "Antonio Rayan",
-    role: "Profesor de conducción.",
+    role: "Profesor de examen práctico.",
     image: "/media/png/Antonio.png",
     slug: "antonio-rayan",
     text: `
@@ -15,7 +15,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Cristina",
-    role: "Profesora de conducción, y gestión.",
+    role: "Profesora de teórico y práctico.",
     image: "/media/png/Cris.png",
     slug: "cristina",
     text: `
@@ -27,7 +27,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Rocío",
-    role: "Profesora de conducción.",
+    role: "Profesora de examen práctico.",
     image: "/media/png/Rocio.png",
     slug: "rocio",
     text: `
@@ -37,12 +37,12 @@ export const team: TeamMember[] = [
     `,
   },
   {
-    name: "Recepción",
+    name: "Marta",
     role: "Atención al alumno.",
     image: "/media/png/incognita.png",
-    slug: "recepcion",
+    slug: "marta",
     text: `
-      Desde recepción se encargan de atender a los alumnos, gestionar horarios y resolver
+      Marta se encarga de atender a los alumnos, gestionar horarios y resolver
       cualquier duda relacionada con las clases y la formación. Su labor es fundamental
       para que todo el proceso sea cómodo, organizado y eficiente desde el primer contacto.
     `,
